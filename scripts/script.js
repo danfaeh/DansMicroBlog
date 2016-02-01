@@ -1,5 +1,5 @@
 window.onload = start;
-var counter=0;
+var counter = 0;
 
   function start(){
     restoreLS();
@@ -69,11 +69,14 @@ var counter=0;
       });
   }
 
-  //fade in animations not working for some reason
   function addGracefully(comment) {
-      $(this).fadeIn(1000, function() {
-        $('#list').prepend('<li id="'+counter+'">'+comment+'</li>');
-    });
+    var string = '<li id="'+counter+'">'+comment+'</li>';
+      $('#list').prepend(string);
+      $('#'+counter).hide();
+
+      $('#'+counter).fadeIn(1000, function() {
+          $('#'+counter).show();
+      });
   }
 
 
