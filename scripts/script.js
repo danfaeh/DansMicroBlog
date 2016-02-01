@@ -1,5 +1,5 @@
 window.onload = start;
-var counter=0;
+var counter = 0;
 
   function start(){
     restoreLS();
